@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обчислення геометричних фігур</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="main-menu" class="view active">
+            <h2>Оберіть задачу:</h2>
+            <div class="menu-btn" data-view="triangle">Периметр трикутника</div>
+            <div class="menu-btn" data-view="rectangle">Периметр прямокутника</div>
+            <div class="menu-btn" data-view="circle">Довжина кола</div>
+            <div class="menu-btn" data-view="about">Про автора</div>
+        </div>
+
+        <div id="triangle-view" class="view">
+            <h2>Периметр трикутника</h2>
+            <div class="input-group">
+                <label for="side1">Сторона 1:</label>
+                <input type="number" id="side1" placeholder="Введіть довжину сторони">
+            </div>
+            <div class="input-group">
+                <label for="side2">Сторона 2:</label>
+                <input type="number" id="side2" placeholder="Введіть довжину сторони">
+            </div>
+            <div class="input-group">
+                <label for="side3">Сторона 3:</label>
+                <input type="number" id="side3" placeholder="Введіть довжину сторони">
+            </div>
+            <button class="calculate-btn" id="calculate-triangle">Обчислити</button>
+            <button class="formula-btn" id="show-triangle-formula">Формула</button>
+            <p class="result" id="triangle-result"></p>
+            <button class="back-btn" id="triangle-back">Назад</button>
+        </div>
+
+        <div id="rectangle-view" class="view">
+            <h2>Периметр прямокутника</h2>
+            <div class="input-group">
+                <label for="length">Довжина:</label>
+                <input type="number" id="length" placeholder="Введіть довжину">
+            </div>
+            <div class="input-group">
+                <label for="width">Ширина:</label>
+                <input type="number" id="width" placeholder="Введіть ширину">
+            </div>
+            <button class="calculate-btn" id="calculate-rectangle">Обчислити</button>
+            <button class="formula-btn" id="show-rectangle-formula">Формула</button>
+            <p class="result" id="rectangle-result"></p>
+            <button class="back-btn" id="rectangle-back">Назад</button>
+        </div>
+
+        <div id="circle-view" class="view">
+            <h2>Довжина кола</h2>
+            <div class="input-group">
+                <label for="radius">Радіус (R):</label>
+                <input type="number" id="radius" placeholder="Введіть радіус">
+            </div>
+            <button class="calculate-btn" id="calculate-circle">Обчислити</button>
+            <button class="formula-btn" id="show-circle-formula">Формула</button>
+            <p class="result" id="circle-result"></p>
+            <button class="back-btn" id="circle-back">Назад</button>
+        </div>
+
+        <div id="about-view" class="view">
+            <h2>Про автора</h2>
+            <div id="author-info">
+                <p>Руднєв Олександр 2025</p>
+            </div>
+            <button class="back-btn" id="about-back">Назад</button>
+        </div>
+    </div>
+
+    <div id="triangle-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" data-modal="triangle-modal">&times;</span>
+            <h2>Формула периметра трикутника</h2>
+            <p>P = a + b + c</p>
+            <p>де <strong>a</strong>, <strong>b</strong>, <strong>c</strong> — сторони трикутника.</p>
+        </div>
+    </div>
+
+    <div id="rectangle-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" data-modal="rectangle-modal">&times;</span>
+            <h2>Формула периметра прямокутника</h2>
+            <p>P = 2 * (a + b)</p>
+            <p>де <strong>a</strong> — довжина, <strong>b</strong> — ширина.</p>
+        </div>
+    </div>
+
+    <div id="circle-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" data-modal="circle-modal">&times;</span>
+            <h2>Формула довжини кола</h2>
+            <p>L = 2 * &pi; * R</p>
+            <p>де <strong>&pi;</strong> (Пі) — постійна величина (приблизно 3.14), <strong>R</strong> — радіус.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
